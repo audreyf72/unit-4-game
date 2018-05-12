@@ -1,0 +1,86 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+wrapper{
+    position: relative;
+    width: 100%;
+}
+
+.leftContainer{
+    width: 50%;
+    float: left;
+}
+
+.rightContainer{
+    width: 50%;
+    float: right;
+}
+
+.bottomContainer{
+    float: left;
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+header {
+    color: white;
+    font-weight: bold;
+    font-size: 36pt;
+    padding: 30px;
+    text-align: center;
+    background-color: indianred;
+}
+
+p{
+    margin-bottom: .5em;
+}
+
+article{
+    color: gray;
+    font-size: 14pt;
+    line-height: 150%;
+    margin: 0 auto 0 auto;
+    padding: 30px;
+    padding-left: 50px;
+}
+
+h1{
+    text-align: center;
+    padding: 25px;
+    font-size: 24pt;
+    color: gray;
+    font-weight: bold;
+}
+
+#numberToMatch{
+    text-align: center;
+    width: 150px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border: indianred 4px solid;
+    color: gray;
+    font-weight: 100;
+    font-size: 92pt;
+}
+
+#playerScore{
+    text-align: center;
+    font-size: 36px;
+}
+
+.crystal-image{
+    float: left;
+    margin-top: 40px;
+    width: 23%;
+}
+
+button{
+    width: 23%;
+    border: 0;
+    background-color: none;
+}

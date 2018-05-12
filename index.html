@@ -5,10 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystals Collector Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="assets/javascript/game.js"></script>
 </head>
 <body>
-    
-</body>
-</html>
+
+<header>Crystals Collector</header>
+
+<wrapper>
+
+<div class="leftContainer">
+
+    <article>
+        <p>You are given a random number to match at the start of the game.
+            There are four crystals below. Each crystal is worth an undisclosed number of points and
+            clicking on a crystal will add those points to your score.</p>
+        <p>You win the game by matching your score exactly to the random number. 
+            You will lose the game if your score goes above the random number.</p>
+        <p>When the game restarts, the number to match will change and the number of points for each 
+            crystal will change as well.</p> 
+    </article>
+
+</div>
+
+<div class="rightContainer">
+
+    <h1>Number to Match:</h1>
+    <p id="numberToMatch"></p>
+
+    <div id="playerScore">Your score: <span id"totalScore">0</span></div>
+
+</div>
+
+</wrapper> 
+
+<div class="bottomContainer">
+        <button id"crystalImg1"><img src="assets/images/crystals-01.png" width="100%"></button>
+        <button id"crystalImg2"><img src="assets/images/crystals-02.png" width="100%"></button>
+        <button id"crystalImg3"><img src="assets/images/crystals-03.png" width="100%"></button>
+        <button id"crystalImg4"><img src="assets/images/crystals-04.png" width="100%"></button>
+</div>
+ 
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+   
+  </body>
+  </html>
