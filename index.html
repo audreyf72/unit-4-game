@@ -35,20 +35,34 @@
 
     <div id="playerScore">Your score: <span id"totalScore">0</span></div>
 
+    <div class="playerStats">
+            <p>Total Wins: <span id"numberWins">0</span></p>
+            <p>Total Losses: <span id"numberLosses">0</span></p>
+    </div>
+    
 </div>
 
 </wrapper> 
 
 <div class="bottomContainer">
-        <button id"crystalImg1"><img src="assets/images/crystals-01.png" width="100%"></button>
-        <button id"crystalImg2"><img src="assets/images/crystals-02.png" width="100%"></button>
-        <button id"crystalImg3"><img src="assets/images/crystals-03.png" width="100%"></button>
-        <button id"crystalImg4"><img src="assets/images/crystals-04.png" width="100%"></button>
+        <div class="crystals">
+            <button id="one"><img src="assets/images/crystals-01.png" class="crystalImg"></button>
+        </div>
+        <div class="crystals">
+            <button id="two"><img src="assets/images/crystals-02.png" class="crystalImg"></button>
+        </div> 
+        <div class="crystals">
+            <button id="three"><img src="assets/images/crystals-03.png" class="crystalImg"></button>
+        </div>
+        <div class="crystals">
+            <button id="four"><img src="assets/images/crystals-04.png" class="crystalImg"></button>
+        </div>
 </div>
- 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/game.js"></script>
-   
-  </body>
-  </html>
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+
+</html>

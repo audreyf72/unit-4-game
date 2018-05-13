@@ -14,14 +14,15 @@ wrapper{
 
 .rightContainer{
     width: 50%;
+    position: relative;
+    top: 20px;
     float: right;
 }
 
 .bottomContainer{
     float: left;
     padding: 20px;
-    padding-top: 0px;
-    margin-top: 0px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -45,25 +46,29 @@ article{
     margin: 0 auto 0 auto;
     padding: 30px;
     padding-left: 50px;
+    padding-bottom: 0px;
 }
 
 h1{
     text-align: center;
-    padding: 25px;
+    padding: 15px;
     font-size: 24pt;
-    color: gray;
+    color: indianred;
     font-weight: bold;
 }
 
 #numberToMatch{
     text-align: center;
-    width: 150px;
+    width: 220px;
     padding: 5px;
+    padding-left: 2px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: indianred 4px solid;
-    color: gray;
+    background-color: rgb(228, 241, 252);
+    color: black;
     font-weight: 100;
     font-size: 92pt;
 }
@@ -71,16 +76,29 @@ h1{
 #playerScore{
     text-align: center;
     font-size: 36px;
+    margin-bottom: 10px;
 }
 
-.crystal-image{
-    float: left;
-    margin-top: 40px;
-    width: 23%;
+.crystalImg{
+    margin-top: 0px;
+    width: 100%;
+}
+
+.playerStats{
+    width: 220px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    font-size: 14pt;
+    border: indianred 4px solid;
+    background-color: indianred;
 }
 
 button{
-    width: 23%;
+    float: left;
+    background-color: white;
     border: 0;
-    background-color: none;
+    width: 23%;
 }
