@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,15 +7,15 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
+
 <body>
 
-<header>Crystals Collector</header>
+<header>Crystals Collector</header>   
 
-<wrapper>
+<container>
 
-<div class="leftContainer">
-
-    <article>
+<div class="GameRules">
+        <h2>Directions:</h2>
         <p>You are given a random number to match at the start of the game.
             There are four crystals below. Each crystal is worth an undisclosed 
             number of points and clicking on a crystal will add those points to
@@ -25,45 +24,22 @@
             You will lose the game if your score goes above the random number.</p>
         <p>When the game restarts, the number to match will change and the number 
             of points for each crystal will change as well.</p> 
-    </article>
-
 </div>
 
-<div class="rightContainer">
-
-    <h1>Number to Match:</h1>
-    <p id="numberToMatch"></p>
-
-    <div id="playerScore">Your score: <span id"totalScore">0</span></div>
-
-    <div class="playerStats">
-            <p>Total Wins: <span id"numberWins">0</span></p>
-            <p>Total Losses: <span id"numberLosses">0</span></p>
-    </div>
-    
+<div class="gameDiv">
+    <h1>Number to Match</h1>
+    <div class="numberMatch"><span id="number-to-guess"></span></div>
+    <div class="playerStats"><span id="totalScore">Your score so far: 0</span></div>
+    <div class="playerStats"><span id="wins">Total wins: 0</span><span id="losses">Total losses: 0</span></div>
 </div>
 
-</wrapper> 
+</container>
 
-<div class="bottomContainer">
-        <div class="crystals">
-            <button id="one"><img src="assets/images/crystals-01.png" class="crystalImg"></button>
-        </div>
-        <div class="crystals">
-            <button id="two"><img src="assets/images/crystals-02.png" class="crystalImg"></button>
-        </div> 
-        <div class="crystals">
-            <button id="three"><img src="assets/images/crystals-03.png" class="crystalImg"></button>
-        </div>
-        <div class="crystals">
-            <button id="four"><img src="assets/images/crystals-04.png" class="crystalImg"></button>
-        </div>
-</div>
+<div id="crystals"></div>
 
-
- 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets/javascript/game.js"></script>
+
 </body>
 
 </html>

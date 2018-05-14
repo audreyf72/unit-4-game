@@ -1,104 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
 }
-wrapper{
-    position: relative;
+
+p {
+    padding-bottom: 20px;
+}
+
+container{
     width: 100%;
 }
 
-.leftContainer{
-    width: 50%;
-    float: left;
+h1 {
+    font-size: 36pt;
+    font-weight: bolder;
+    line-height: 150%;
 }
 
-.rightContainer{
-    width: 50%;
-    position: relative;
-    top: 20px;
-    float: right;
-}
-
-.bottomContainer{
-    float: left;
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
+h2{
+    color: black;
+    font-size: 24pt;
+    font-weight: 400;
+    padding-bottom: 10px;
 }
 
 header {
+    width: 100%;
+    padding: 50px;
     color: white;
     font-weight: bold;
-    font-size: 36pt;
-    padding: 30px;
+    font-size: 48pt;
     text-align: center;
-    background-color: indianred;
+    background-color: rgb(12, 64, 152);
 }
 
-p{
-    margin-bottom: .5em;
+.GameRules{
+    color: rgb(78, 80, 89);
+    float: left;
+    width: 50%;
+    font-weight: 100;
+    padding: 50 5 15 60;
+    font-size: 16pt;
+    line-height: 140%;
 }
 
-article{
-    color: gray;
-    font-size: 14pt;
-    line-height: 150%;
-    margin: 0 auto 0 auto;
-    padding: 30px;
-    padding-left: 50px;
-    padding-bottom: 0px;
-}
-
-h1{
+.gameDiv{
+    float: left;
+    padding: 50 5 50 5;
+    width: 50%;
     text-align: center;
-    padding: 15px;
-    font-size: 24pt;
-    color: indianred;
-    font-weight: bold;
 }
 
-#numberToMatch{
-    text-align: center;
-    width: 220px;
-    padding: 5px;
-    padding-left: 2px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    border: indianred 4px solid;
+.numberMatch{
+    margin: 20px;
+}
+
+#number-to-guess{
+    padding: 0 15 0 10;
+    border:  rgb(12, 64, 152) 4px solid;
     background-color: rgb(228, 241, 252);
     color: black;
-    font-weight: 100;
-    font-size: 92pt;
+    font-weight: bold;
+    font-size: 96pt;
+    line-height: 100%;
 }
-
-#playerScore{
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.crystalImg{
-    margin-top: 0px;
-    width: 100%;
+#totalScore{
+    font-size: 30pt;
+    line-height: 150%;
 }
 
 .playerStats{
-    width: 220px;
-    padding-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: white;
-    font-size: 14pt;
-    border: indianred 4px solid;
-    background-color: indianred;
+    font-size: 20pt;
 }
 
-button{
+#wins{
+    padding-right: 20px;
+}
+
+.crystal-image {
+    width: 25%;
+    padding: 10px;
+}
+
+#crystals{
     float: left;
-    background-color: white;
-    border: 0;
-    width: 23%;
+    margin-left: 30px;
+    width: 90%;
+    text-align: center;
 }

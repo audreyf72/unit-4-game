@@ -1,116 +1,72 @@
-//Generate random number at start of game between
-//19 and 120 for targetNumber
 $(document).ready(function() {
+//Generate a random number between 19 and 120 to guess --Target number parameter is not working--    
   var targetNumber = Math.floor(Math.random() * 120 + 19)
-  $("#numberToMatch").text(targetNumber);
+  $("#number-to-guess").text(targetNumber);var crystals = $("#crystals");
 
- console.log("Target number: " + targetNumber);
+console.log("Number to guess: " + targetNumber); 
 
-//global variables
-  var randomValue = []
-  var scoreValue = 0;
-  var wins = 0;
-  var losses = 0;
+//Global variables
+var counter = 0;
+var numberOptions = [];
+var wins = 0;
+var losses = 0;
+var crystalImages = ["assets/images/crystals-01.png", "assets/images/crystals-02.png", "assets/images/crystals-03.png", "assets/images/crystals-04.png"];
 
-/*variables for each instance of crystal images (--tried creating variables for each crystal to get the functions working. No help.--)
-var crystal1 = $("#one");  
-var crystal2 = $("#two");
-var crystal3 = $("#three");
-var crystal4 = $("#four");*/
-
-//Target IDs for scores (--Score is not being recorded--)
-$("#numberLosses").text(losses);
-$("#numberWins").text(wins);
-
-//sets up random numbers for each crystal
+//Generate 4 random numbers between 1 and 13 for crystal values
 function fourNumbers() {
   for (var i = 0; i < 4; i++) {
       var num = Math.floor(Math.random() * 13 + 1);
-      randomValue.push(num);
+      numberOptions.push(num);
   }
 }
 fourNumbers();
+console.log("Crystal values: " + numberOptions);
 
-//resets the game (--unable to test game reset because clicking the crystals gets no result--)
+//Resets the game after win/lose
 function reset() {
-  Random = Math.floor(Math.random()* 69 + 30);
-  $("#numberToMatch").text(targetNumber);
-  randomValue = [];
+  targetNumber = Math.floor(Math.random()* 120 + 19);
+  $("#number-to-guess").text(targetNumber);
+  numberOptions = [];
   fourNumbers();
-  scoreValue = 0;
-  $("#totalScore").text(scoreValue);
+  counter = 0;
+  $("#totalScore").text("Your score so far: " + counter);
 }
 
-//adds the wins to the total (--wins are not being recorded becuase scoreValue isn't being calculated in the functions below--)
-function win() {
-  alert("You won!");
-  wins++;
-  $("#numberWins").text(wins);
-  reset();
+//Generates 4 crystal images with different "src" attributes and random values based on the numberOptions variable
+for (var i = 0; i < 4; i++) {
+    var imageCrystal = $("<img>");
+    imageCrystal.addClass("crystal-image");
+    imageCrystal.attr("src", crystalImages[i]);
+    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+    crystals.append(imageCrystal);
 }
 
-//adds the losses to the total (--losses are not being recorded becuase scoreValue isn't being calculated in the functions below--)
-function lose() {
-  alert("You lost!");
-  losses++;
-  $("#numberLosses").text(losses);
-  reset();
-}
+//Adds the value of crystal clicked to the counter and displays in total score.
+crystals.on("click", ".crystal-image", function() {   
+    var crystalValue = ($(this).attr("data-crystalvalue"));
+    crystalValue = parseInt(crystalValue); 
+    counter += crystalValue;
+    $("#totalScore").text("Your score so far: " + counter);
 
-//Assign four random numbers to button ID's 
-//---STUCK AT THIS POINT---
-//Buttons are being clicked (checked with an alert) but functions not running
-$("#one").click (function () {
-  scoreValue = scoreValue + randomValue[0];
-    $("#totalScore").text(scoreValue);
+console.log("Counter: " + counter);    
 
-    if (scoreValue == targetNumber) {
-        win();
+//Sets win or lose condition and execution
+    if (counter === targetNumber) {
+        wins++;
+        $("#wins").text("Wins: " + wins);  
+        alert("You win!");
+        reset();
+        alert("Try again!");
     }
-    else if (scoreValue > targetNumber) {
-        lose();
+
+    else if (counter >= targetNumber) {
+        losses++;  
+        $("#losses").text("Losses: " + losses);
+        alert("You lose!!");
+        reset();
+        alert("Try again!");
     }
-})
 
-$("#two").click (function () {
-  scoreValue = scoreValue + randomValue[1];
-  $("#totalScore").text(scoreValue);
-
-  if (scoreValue == targetNumber) {
-      win();
-  }
-  else if (scoreValue > targetNumber) {
-      lose();
-  }
-})
-
-$("#three").click (function () {
-  scoreValue = scoreValue + randomValue[2];
-  $("#totalScore").text(scoreValue);
-
-  if (scoreValue == targetNumber) {
-      win();
-  }
-  else if (scoreValue > targetNumber) {
-      lose();
-  }
-})
-
-$("#four").click (function () {
-  scoreValue = scoreValue + randomValue[3];
-    $("#totalScore").text(scoreValue);
-
-    if (scoreValue == targetNumber) {
-        win();
-    }
-    else if (scoreValue > targetNumber) {
-        lose();
-    }
-  });
-
-console.log("Score value: " + scoreValue);
-console.log("Random value: " + randomValue);
-console.log("Wins :" + wins);
-console.log("Losses: " + losses);
+});
 
 });
