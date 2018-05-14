@@ -12,13 +12,13 @@ $(document).ready(function() {
   var wins = 0;
   var losses = 0;
 
-/*variables for each instance of crystal images
+/*variables for each instance of crystal images (--tried creating variables for each crystal to get the functions working. No help.--)
 var crystal1 = $("#one");  
 var crystal2 = $("#two");
 var crystal3 = $("#three");
 var crystal4 = $("#four");*/
 
-//Target IDs for scores 
+//Target IDs for scores (--Score is not being recorded--)
 $("#numberLosses").text(losses);
 $("#numberWins").text(wins);
 
@@ -31,7 +31,7 @@ function fourNumbers() {
 }
 fourNumbers();
 
-//resets the game
+//resets the game (--unable to test game reset because clicking the crystals gets no result--)
 function reset() {
   Random = Math.floor(Math.random()* 69 + 30);
   $("#numberToMatch").text(targetNumber);
@@ -41,7 +41,7 @@ function reset() {
   $("#totalScore").text(scoreValue);
 }
 
-//adds the wins to the total
+//adds the wins to the total (--wins are not being recorded becuase scoreValue isn't being calculated in the functions below--)
 function win() {
   alert("You won!");
   wins++;
@@ -49,7 +49,7 @@ function win() {
   reset();
 }
 
-//adds the losses to the total
+//adds the losses to the total (--losses are not being recorded becuase scoreValue isn't being calculated in the functions below--)
 function lose() {
   alert("You lost!");
   losses++;
