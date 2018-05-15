@@ -1,6 +1,6 @@
 $(document).ready(function() {
 //Generate a random number between 19 and 120 to guess --Target number parameter is not working--    
-  var targetNumber = Math.floor(Math.random() * 120 + 19)
+  var targetNumber = Math.floor(Math.random() * 121 + 19);
   $("#number-to-guess").text(targetNumber);var crystals = $("#crystals");
 
 console.log("Number to guess: " + targetNumber); 
@@ -12,7 +12,7 @@ var wins = 0;
 var losses = 0;
 var crystalImages = ["assets/images/crystals-01.png", "assets/images/crystals-02.png", "assets/images/crystals-03.png", "assets/images/crystals-04.png"];
 
-//Generate 4 random numbers between 1 and 13 for crystal values
+//Generate 4 random numbers between 1 and 12 for crystal values
 function fourNumbers() {
   for (var i = 0; i < 4; i++) {
       var num = Math.floor(Math.random() * 13 + 1);
