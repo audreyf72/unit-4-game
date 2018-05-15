@@ -19,7 +19,6 @@ container{
 h1 {
     font-size: 36pt;
     font-weight: bolder;
-    line-height: 150%;
 }
 
 h2{
@@ -29,14 +28,27 @@ h2{
     padding-bottom: 10px;
 }
 
+#titleImage{
+    position: fixed;
+    top: 0;
+    background-image: url("../images/title_image.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 265px;
+}
+
 header {
     width: 100%;
+    height: 220px;
     padding: 50px;
+    margin-bottom: 30px;
     color: white;
     font-weight: bold;
     font-size: 48pt;
     text-align: center;
-    background-color: rgb(12, 64, 152);
+    background-color: rgb(44, 97, 187);
 }
 
 .GameRules{
@@ -44,20 +56,20 @@ header {
     float: left;
     width: 50%;
     font-weight: 100;
-    padding: 50 5 15 60;
+    padding: 35 5 15 60;
     font-size: 16pt;
     line-height: 140%;
 }
 
 .gameDiv{
     float: left;
-    padding: 50 5 50 5;
+    padding: 25 5 50 5;
     width: 50%;
     text-align: center;
 }
 
 .numberMatch{
-    margin: 20px;
+    margin: 30 20 20 20;
 }
 
 #number-to-guess{
@@ -89,6 +101,8 @@ header {
 
 #crystals{
     float: left;
+    height: 225px;
+    padding: 20px;
     margin-left: 30px;
     width: 90%;
     text-align: center;

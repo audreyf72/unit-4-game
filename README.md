@@ -1,16 +1,13 @@
 Crystals Collector Game
 
-You are given a random number to match at the start of the game.
-There are four crystals below. Each crystal is worth an undisclosed 
+Radom selector game using HTML, CSS, Javascript and jQuery.
+
+The player is given a random number to match at the start of the game.
+There are four crystals to click on. Each crystal is worth an undisclosed 
 number of points and clicking on a crystal will add those points to
-your score.
+The players score.
 
-You win the game by matching your score exactly to the random number. 
-You will lose the game if your score goes above the random number.
+The player wins the game by matching the score exactly to the random number. 
+They will lose the game if the score exceeds the random number.
 
-When the game restarts, the number to match will change and the number 
-of points for each crystal will change as well.
-
---Problems with coding the game---
-
-I was able to fix the issues with assigning values to each crystal. My remaining issue is that the random number generated at the start of the game doesn't stay within the parameters, between 19 to 120. I'm still working on that problem.
+When the game restarts, the win or loss is logged in the player stats, the random number will change, the value of each crystal will change, and the player score will reset to zero. 
