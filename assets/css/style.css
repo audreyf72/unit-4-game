@@ -29,26 +29,31 @@ h2{
 }
 
 #titleImage{
-    position: fixed;
+    position: relative;
     top: 0;
     background-image: url("../images/title_image.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 265px;
+    height: 210px;
+    z-index: 2;
 }
 
 header {
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 220px;
+    height: 210px;
     padding: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    border-bottom: rgb(12, 64, 152) 4px solid; 
     color: white;
     font-weight: bold;
     font-size: 48pt;
     text-align: center;
     background-color: rgb(44, 97, 187);
+    z-index: 1;
 }
 
 .GameRules{
@@ -56,14 +61,14 @@ header {
     float: left;
     width: 50%;
     font-weight: 100;
-    padding: 35 5 15 60;
-    font-size: 16pt;
-    line-height: 140%;
+    padding: 25 5 15 60;
+    font-size: 15pt;
+    line-height: 135%;
 }
 
 .gameDiv{
     float: left;
-    padding: 25 5 50 5;
+    padding: 25 5 20 5;
     width: 50%;
     text-align: center;
 }
@@ -95,13 +100,13 @@ header {
 }
 
 .crystal-image {
-    width: 25%;
+    width: 23%;
     padding: 10px;
 }
 
 #crystals{
     float: left;
-    height: 225px;
+    height: 200px;
     padding: 20px;
     margin-left: 30px;
     width: 90%;
