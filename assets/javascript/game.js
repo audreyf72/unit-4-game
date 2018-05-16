@@ -42,10 +42,13 @@ for (var i = 0; i < 4; i++) {
     crystals.append(imageCrystal);
 }
 
+
 //Adds the value of crystal clicked to the counter and displays in total score.
-crystals.on("click", ".crystal-image", function() {   
+crystals.on("click", ".crystal-image", function() {  
+    var audio = $("#mysoundclip")[0];
+    audio.play();  
     var crystalValue = ($(this).attr("data-crystalvalue"));
-    crystalValue = parseInt(crystalValue); 
+    crystalValue = parseInt(crystalValue);
     counter += crystalValue;
     $("#totalScore").text("Your score so far: " + counter);
 
